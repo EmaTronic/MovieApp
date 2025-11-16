@@ -7,13 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello naturaleza 2!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+  <androidx.fragment.app.FragmentContainerView
+      android:id="@+id/nav_host_fragment"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:name="androidx.navigation.fragment.NavHostFragment"
+      app:defaultNavHost="true"
+      app:navGraph="@navigation/main_graph"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  <!-- Línea	Para qué sirve
+android:name="androidx.navigation.fragment.NavHostFragment"	Convierte al contenedor en un NavHost que manejará navegación
+app:defaultNavHost="true"	Hace que este NavHost sea el principal, maneja el botón back automáticamente
+app:navGraph="@navigation/main_graph"	Selecciona el archivo de rutas que va a usar el NavHost
+
+
+-->
